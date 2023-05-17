@@ -13,7 +13,11 @@ import org.springframework.http.ResponseEntity;
 
 public class Main {
     private static HelloWorldAPI makeClient() {
-        return Feign.builder().contract(new SpringMvcContract()).encoder(new JacksonEncoder()).decoder(new ResponseEntityDecoder(new JacksonDecoder())).target(HelloWorldClient.class, "http://localhost:8080/hello");
+        return Feign.builder()
+                .contract(new SpringMvcContract())
+                .encoder(new JacksonEncoder())
+                .decoder(new ResponseEntityDecoder(new JacksonDecoder()))
+                .target(HelloWorldClient.class, "http://localhost:8080/hello");
     }
 
     public static void main(String[] args) {
