@@ -4,13 +4,10 @@ import com.example.feignapi.commons.api.HelloWorldAPI;
 import com.example.feignapi.commons.dto.HelloResponse;
 import com.example.feignapi.commons.dto.Message;
 import com.example.feignapi.internal.HelloWorldInternalAPI;
-import com.fasterxml.jackson.databind.jsontype.impl.ClassNameIdResolver;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hello")
